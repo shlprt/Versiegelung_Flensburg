@@ -1,6 +1,6 @@
 document.getElementById('upload').addEventListener('change', handleFileSelect, false);
 
-var map = L.map('map').setView([0, 0], 2); // Centered on the world
+var map = L.map('map').setView([54.775, 9.45], 12);
 
 L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
     maxZoom: 18,
