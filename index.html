@@ -3,22 +3,36 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Shapefile Viewer</title>
+    <title>Leaflet Map with GeoJSON Layers</title>
+    <!-- Include Leaflet CSS -->
     <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
     <style>
         #map {
-            height: 100vh;
+            height: 600px; /* Set the height of the map */
+            width: 100%; /* Set the width of the map */
+        }
+        .layer-toggle {
+            margin-bottom: 10px;
         }
     </style>
 </head>
 <body>
-    <h1>Digitaler Flächenmonitor Flensburg</h1>
-    <input type="file" id="upload" accept=".zip" />
-    <div id="map"></div>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/proj4js/2.12.0/proj4.js"></script>
-    <script src="https://unpkg.com/jszip@3.5.0/dist/jszip.min.js"></script>
-    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
-    <script src="https://unpkg.com/shapefile@0.6.6/dist/shapefile.min.js"></script>
-    <script src="main.js"></script>
+
+<div id="map"></div>
+<div id="layer-controls">
+    <div class="layer-toggle">
+        <input type="checkbox" id="layer1" checked> Layer 1 (GeoJSON 1)
+    </div>
+    <div class="layer-toggle">
+        <input type="checkbox" id="layer2" checked> Layer 2 (GeoJSON 2)
+    </div>
+    <!-- Add more layers as needed -->
+</div>
+
+<!-- Include Leaflet JS -->
+<script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+<!-- Include your main.js file -->
+<script src="main.js"></script>
+
 </body>
 </html>
